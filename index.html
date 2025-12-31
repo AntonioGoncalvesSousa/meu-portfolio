@@ -32,15 +32,6 @@
                 <div class="separator"></div>
 
                 <ul class="contacts-list">
-                    <li class="contact-item">
-
-                        <div class="contact-info">
-                            <p class="contact-title">Email</p>
-
-                            <a href="mailto:antonio.sousawork22@gmail.com"
-                                class="contact-link">antonio.sousawork22@gmail.com</a>
-                        </div>
-                    </li>
 
                     <li class="contact-item">
 
@@ -99,10 +90,16 @@
                         projetos e para a entrega de valor real.</p>
                 </section>
 
+                <section class="email-buttons">
+                    <a class="form-btn" href="#email-contact">
+                        <ion-icon name="mail"></ion-icon>
+                        <span>Enviar E-mail</span>
+                    </a>
                     <a class="form-btn" href="assets/cv/Antonio_CV.pdf" target="_blank" download>
                         <ion-icon name="download"></ion-icon>
                         <span>Baixar CV</span>
                     </a>
+                </section>
 
                 <section class="service">
                     <h3 class="h3 service-title">Oque eu faço</h3>
@@ -195,6 +192,30 @@
                         </li>
 
                     </ul>
+                </section>
+
+                <section class="email-container" id="email-contact" data-page="email">
+                    <header>
+                        <h2 class="h3 testimonials-title">Entrar em contato</h2>
+                    </header>
+                    <form class="email-form" action="https://formsubmit.co/antonio.sousawork22@gmail.com" method="POST">
+                        <label class="email-label" for="name">Nome</label>
+                        <input class="email-input" type="text" name="name" placeholder="Digite seu nome" required>
+                        <label class="email-label" for="email">E-mail</label>
+                        <input class="email-input" type="email" name="email" placeholder="example@email.com" required>
+                        <label class="email-label" for="linkedin">Linkedin</label>
+                        <input class="email-input" type="text" name="linkedin" placeholder="https://www.linkedin.com/in/username" required>
+                        <label class="email-label" for="message">Mensagem</label>
+                        <textarea class="email-input" name="message" placeholder="Digite sua mensagem" required></textarea>
+                        <div class="email-buttons">
+                            <button class="form-btn" type="submit">
+                                <ion-icon name="send"></ion-icon>
+                                Enviar e-mail
+                            </button>
+                        </div>
+                        <input type="hidden" name="_next" value="https://antoniogoncalvessousa.github.io/meu-portfolio/thanks">
+                        <input type="hidden" name="_captcha" value="false">
+                    </form>
                 </section>
 
                 <div class="modal-container " data-modal-container>
@@ -582,6 +603,9 @@
 </body>
 
 </html>
+
+
+
 <script src="js/main.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -167,3 +167,16 @@ for (let i = 0; i < navigationLinks.length; i++) {
         }
     });
 }
+
+// Activating Modal-email
+
+const modalEmailContainer = document.querySelector('[data-modal-email-container]');
+const modalEmailCloseBtn = document.querySelector('[data-modal-close-btn-email]');
+const overlayEmail = document.querySelector('[data-overlay-email]');
+
+// Function to toggle modal-email
+
+const modalEmailFunc = function () {
+    modalEmailContainer.classList.toggle('active');
+    overlayEmail.classList.toggle('active');
+}
