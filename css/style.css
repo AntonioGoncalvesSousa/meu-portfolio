@@ -1856,3 +1856,30 @@ article.active {
     justify-content: center;
     align-items: center;
 }
+
+.skill-space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: var(--fs-7);
+    font-weight: var(--fw-500);
+    line-height: 1.2;
+    color: var(--light-gray);
+    cursor: pointer;
+    background-color: var(--bg-gradient-jet);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--border-gradient-onyx);
+    box-shadow: var(--shadow1);
+}
+
+.skill-space .skill-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
