@@ -154,17 +154,18 @@ const pages = document.querySelectorAll('[data-page]');
 
 for (let i = 0; i < navigationLinks.length; i++) {
     navigationLinks[i].addEventListener('click', function () {
+        navigationLinks.forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
 
-        for (let i = 0; i < pages.length; i++) {
-            if (this.innerHTML.toLowerCase() == pages[i].dataset.page) {
-                pages[i].classList.add('active');
-                navigationLinks[i].classList.add('active');
-                window.scrollTo(0, 0);
+        for (let j = 0; j < pages.length; j++) {
+            if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
+                pages[j].classList.add('active');
             } else {
-                pages[i].classList.remove('active');
-                navigationLinks[i].classList.remove('active');
+                pages[j].classList.remove('active');
             }
         }
+
+        window.scrollTo(0, 0);
     });
 }
 
