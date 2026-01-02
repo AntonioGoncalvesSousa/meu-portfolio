@@ -181,3 +181,45 @@ const modalEmailFunc = function () {
     modalEmailContainer.classList.toggle('active');
     overlayEmail.classList.toggle('active');
 }
+
+// Getting experience time
+
+const experienceElement = document.querySelector('[data-experience]');
+
+const calculateExperience = function () {
+    const startDate = new Date(2024, 0, 10); // 10 de Janeiro de 2024
+    const today = new Date();
+
+    let years = today.getFullYear() - startDate.getFullYear();
+    let months = today.getMonth() - startDate.getMonth();
+
+    // Ajusta se o dia atual é menor que o dia de início
+    if (today.getDate() < startDate.getDate()) {
+        months--;
+    }
+
+    // Ajusta se os meses ficaram negativos
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    // Formata o texto
+    let text = '';
+    if (years > 0) {
+        text += years + (years === 1 ? ' ano' : ' anos');
+    }
+    if (months > 0) {
+        if (text) text += ' e ';
+        text += months + (months === 1 ? ' mês' : ' meses');
+    }
+    if (!text) {
+        text = 'Menos de 1 mês';
+    }
+
+    return text;
+}
+
+if (experienceElement) {
+    experienceElement.textContent = calculateExperience();
+}
